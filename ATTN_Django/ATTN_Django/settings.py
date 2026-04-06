@@ -42,12 +42,10 @@ env = environ.Env(
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # 4. Security Settings (Pulled from .env)
-SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
 
 # 5. Allowed Hosts (Crucial for publishing)
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.railway.app', '.vercel.app']
-
+ALLOWED_HOSTS = ['*']
 # 6. Database Configuration (Pulled from .env)
 DATABASES = {
     'default': dj_database_url.config(
