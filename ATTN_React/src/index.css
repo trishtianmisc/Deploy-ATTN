@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* set Poppins as the default app font */
+:root {
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.heritage-text {
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.heritage-ui {
+  font-family: var(--font-sans);
+}
+
+/* WRAPPER (optional but recommended for layout control) */
+.status-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* THE SELECT CONTROL */
+.status-dropdown select {
+  appearance: none; /* remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: #ffffff;
+  padding: 10px 40px 10px 14px;
+  font-size: 14px;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+  outline: none;
+
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* ON FOCUS */
+.status-dropdown select:focus {
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.25);
+}
+
+/* CUSTOM ARROW */
+.status-dropdown::after {
+  content: "⌄";
+  font-size: 14px;
+  color: #555;
+
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  pointer-events: none;
+}
+

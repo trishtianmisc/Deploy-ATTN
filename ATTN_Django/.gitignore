@@ -1,0 +1,22 @@
+# SECRETS (Add this!)
+.env
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+
+# Django stuff
+*.log
+*.pot
+*.py[cod]
+db.sqlite3
+/staticfiles/
+/media/
+
+# IDEs
+.vscode/
+.idea/
