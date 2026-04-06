@@ -37,6 +37,11 @@ env = environ.Env(
     DEBUG=(bool, False)
 )
 
+CSRF_TRUSTED_ORIGINS = os.getenv(
+    "CSRF_TRUSTED_ORIGINS", 
+    "http://localhost:8000"
+).split(",")
+
 # 3. Read the .env file
 # This looks for a file named .env in your root project folder
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
