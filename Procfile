@@ -1,1 +1,1 @@
-web: gunicorn ATTN_Django.wsgig
+web: gunicorn ATTN_Django.wsgi
