@@ -1,1 +1,1 @@
-web: gunicorn ATTN_Django.wsgi
+web: gunicorn --pythonpath ATTN_Django ATTN_Django.wsgi
